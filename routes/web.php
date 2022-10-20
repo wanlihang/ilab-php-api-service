@@ -5,7 +5,13 @@
  *
  * (c) 杭州白书科技有限公司
  */
-
+Route::get('health', function () {
+    $content = '{ "status" : "UP" }';
+    $status = 200;
+    $value = 'application/json; charset=utf-8';
+    return response($content, $status)
+        ->header('Content-Type', $value);
+});
 Route::get('/', 'IndexController@index');
 
 Route::get('/user/protocol', 'IndexController@userProtocol')->name('user.protocol');
