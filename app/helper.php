@@ -474,8 +474,8 @@ if (!function_exists('get_platform')) {
      */
     function get_platform()
     {
-        // 如果默认读取不到，则将平台统一设置为APP
-        $platform = strtoupper(request()->header('meedu-platform', \App\Constant\FrontendConstant::LOGIN_PLATFORM_APP));
+        // 如果默认读取不到，则将平台统一设置为PC
+        $platform = strtoupper(request()->header('meedu-platform', \App\Constant\FrontendConstant::LOGIN_PLATFORM_PC));
         $platforms = [
             \App\Constant\FrontendConstant::LOGIN_PLATFORM_APP,
             \App\Constant\FrontendConstant::LOGIN_PLATFORM_PC,
